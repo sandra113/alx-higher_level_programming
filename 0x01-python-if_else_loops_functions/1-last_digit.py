@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-number_str = str(abs(number))
-num_length = len(number_str)
-i = number_str[num_length - 1]
-i = int(i)
+i = abs(number) % 10 
 if i == 0:
     print("Last digit of", number, "is", i, "and is 0")
 elif i > 5:
