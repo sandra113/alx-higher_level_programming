@@ -11,4 +11,4 @@ for j in range(val_len):
         if 'a' <= val[j] <= 'z':
             upper = ord(val[j]) - ord('a') + ord('A')
             val = val[:j] + chr(upper) + val[j+1:]
-print("{}".format(val))
+print("{}".format(val), end='')
