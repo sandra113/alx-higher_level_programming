@@ -7,7 +7,7 @@ for i in range(97, 123):
     val_len = len(val)
 
 for j in range(val_len):
-    if j % 2 == 1:
+    if j % 2 == 0:
         if 'a' <= val[j] <= 'z':
             upper = ord(val[j]) - ord('a') + ord('A')
             val = val[:j] + chr(upper) + val[j+1:]
