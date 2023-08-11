@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 import string
-print(*string.ascii_uppercase,'\n')
+print(''.join([string.ascii_uppercase[i] for i in range(26)]), end='\n')
