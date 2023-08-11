@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+import hidden_4
 
 if __name__ == "__main__":
-    from hidden_4 import my_secret_santa, print_hidden, print_school
-
-    print()
+    names = dir(hidden_4)
+    for name in sorted(names):
+        if not name.startswith("__"):
+            print(name)
