@@ -53,9 +53,13 @@ class Square:
         """Prints in stdout the square with character #"""
         if self.__size == 0:
             print()
-        elif not isinstance(self.__position, tuple) or len(self.__position) != 2 or \
-                not all(isinstance(x, int) and x >= 0 for x in self.__position):
-                    raise TypeError("position must be a tuple of 2 positive integers")
+        elif (
+                not isinstance(self.__position, tuple)
+                or len(self.__position) != 2
+                or not all(isinstance(x, int) and
+                x >= 0 for x in self.__position)
+                ):
+            raise TypeError("position must be a tuple of 2 positive integers")
         else:
             for i in range(self.__position[1]):
                 print()
