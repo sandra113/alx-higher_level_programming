@@ -4,20 +4,20 @@
 
 # Test case 1: Adding two integers
 #add_integer(5, 3)
-Expected Output: 8
+8
 
 # Test case 2: Adding a float and an integer
 #add_integer(2.5, 4)
-Expected Output: 6
+6.5
 
 # Test case 3: Adding two floats
 #add_integer(1.25, 3.75)
-Expected Output: 5
+5
 
 # Test case 4: Adding a float and a non-numeric value (should raise TypeError)
 #add_integer(2.5, "3")
-Expected Output: TypeError
+TypeError
 
 # Test case 5: Adding two non-numeric values (should raise TypeError)
 #add_integer("2", "3")
-Expected Output: TypeError
+TypeError
