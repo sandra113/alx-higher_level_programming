@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 
 def add_integer(a, b=98):
-    num1 = int(a)
-    num2 = int(b)
 
-    if not isinstance(num1, int) or isinstance(num1, float):
+    if not isinstance(a,(int, float)):
         raise TypeError("a must be an integer")
 
-    if not isinstance(num2, int) or isinstance(num2, float):
+    if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
 
-    return num1 + num2
+    if isinstance(a, float):
+        a = int(a)
+    if isinstance(b, float):
+        b = int(b)
+    return a + b
