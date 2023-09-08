@@ -1,21 +1,23 @@
 # Test cases for add_integer function
 
+# add_integer = __import__('0-add_integer').add_integer
+
 # Test case 1: Adding two integers
-Input: 5, 3
+#add_integer(5, 3)
 Expected Output: 8
 
 # Test case 2: Adding a float and an integer
-Input: 2.5, 4
+#add_integer(2.5, 4)
 Expected Output: 6
 
 # Test case 3: Adding two floats
-Input: 1.25, 3.75
+#add_integer(1.25, 3.75)
 Expected Output: 5
 
 # Test case 4: Adding a float and a non-numeric value (should raise TypeError)
-Input: 2.5, "3"
+#add_integer(2.5, "3")
 Expected Output: TypeError
 
 # Test case 5: Adding two non-numeric values (should raise TypeError)
-Input: "2", "3"
+#add_integer("2", "3")
 Expected Output: TypeError
