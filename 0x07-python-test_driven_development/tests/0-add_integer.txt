@@ -1,7 +1,9 @@
 # Test cases for add_integer function
 
+>>> import sys
+>>> sys.path.append('..')
+>>> add_integer = __import__('0-add_integer').add_integer
 # Test case 1: Adding two integers
->>> from .. import add_integer
 >>> add_integer(5, 3)
 8
 
