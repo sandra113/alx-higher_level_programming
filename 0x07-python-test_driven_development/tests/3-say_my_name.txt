@@ -1,1 +1,29 @@
-#test#test#test
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+# Test 1: Valid input with both first and last names
+>>> say_my_name("John", "Doe")
+My name is John Doe
+
+# Test 2: Valid input with only the first name
+>>> say_my_name("Alice")
+My name is Alice
+
+# Test 3: Valid input with empty first and last names
+>>> say_my_name("", "")
+My name is  
+
+# Test 4: Invalid input - first_name is an integer (should raise TypeError)
+>>> say_my_name(42, "Doe")
+Traceback (most recent call last):
+        ...
+TypeError: first_name must be a string
+
+# Test 5: Invalid input - last_name is a list (should raise TypeError)
+>>> say_my_name("John", [1, 2, 3])
+Traceback (most recent call last):
+        ...
+TypeError: last_name must be a string
+
+# Test 6: Valid input with first name and last name containing special characters
+>>> say_my_name("John", "Doe-Smith")
+My name is John Doe-Smith
+
