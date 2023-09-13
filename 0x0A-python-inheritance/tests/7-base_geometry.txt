@@ -6,12 +6,10 @@
 Traceback (most recent call test):
 	...
 TypeError: name must be an integer
-
 >>> integer_validator("age", 0)
 Traceback (most recent call test):
 	...
 ValueError: age must be greater than 0
-
 >>> integer_validator("distance", -4)
 Traceback (most recent call test):
 	...
