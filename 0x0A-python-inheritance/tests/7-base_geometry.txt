@@ -5,7 +5,7 @@
 >>> integer_validator("name", "John")
 Traceback (most recent call test):
 	...
-ValueError: name must be an integer
+TypeError: name must be an integer
 
 >>> integer_validator("age", 0)
 Traceback (most recent call test):
