@@ -21,3 +21,6 @@ Class MyList Test file
 >>> my_list.append(7)
 >>> my_list.print_sorted()
 [-9, 0, 7]
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
