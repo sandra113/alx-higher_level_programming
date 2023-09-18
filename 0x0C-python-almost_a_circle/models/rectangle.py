@@ -10,10 +10,10 @@ class Rectangle(Base):
         """class constructor"""
         super().__init__(id)
 
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -84,3 +84,25 @@ class Rectangle(Base):
         """Returns the string representation of the class"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        """Assigns an argument to each attribute"""
+        if args:
+            attributes = ["id", "width", "height", "x", "y"]
+            for i, arg in enumerate(args):
+                if i < len(attributes):
+                    setattr(self, attributes[i], arg)
+
+        for key, value in kwargs.items():
+            if hasattr(self, key):
+                setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Rectangle"""
+        return {
+            'id' : self.id,
+            'width' : self.width,
+            'height' : self.height,
+            'x' : self.x,
+            'y' : self.y
+            }
