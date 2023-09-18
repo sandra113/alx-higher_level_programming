@@ -1,21 +1,18 @@
 import unittest
-from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 class TestBase(unittest.TestCase):
-    def test_create_instance_with_id(self):
-        instance = Base(1)
-        self.assertEqual(instance.id, 1)
-
-    def test_create_instance_without_id(self):
-        instance1 = Base()
-        instance2 = Base()
-        self.assertEqual(instance1.id, 1)
-        self.assertEqual(instance2.id, 2)
-
     def test_to_json_string(self):
-        instance = Base(1)
-        json_string = Base.to_json_string([instance.to_dictionary()])
-        self.assertEqual(json_string, '[{"id": 1}]')
+        rectangle = Rectangle(1, 2, 3, 4, 5)
+        square = Square(6, 7, 8, 9)
+        
+        # Test the to_json_string method on Rectangle and Square instances
+        json_string_rectangle = Rectangle.to_json_string([rectangle.to_dictionary()])
+        json_string_square = Square.to_json_string([square.to_dictionary()])
+        
+        self.assertEqual(json_string_rectangle, '[{"id": 5, "width": 1, "height": 2, "x": 3, "y": 4}]')
+        self.assertEqual(json_string_square, '[{"id": 9, "size": 6, "x": 7, "y": 8}]')
 
 if __name__ == '__main__':
     unittest.main()
