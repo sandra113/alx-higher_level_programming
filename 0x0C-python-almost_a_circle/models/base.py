@@ -71,3 +71,26 @@ class Base:
             return instance_list
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserializes and loads instances from a CSV file."""
+        filename = cls.__name__ + ".csv"
+        instance_list = []
+
+        try:
+            with open(filename, "r") as file:
+                for line in file:
+                    attrs = line.strip().split(',')
+                    if cls.__name__ == "Rectangle":
+                        instance = cls(int(attrs[1]), int(attrs[2]),
+                                       int(attrs[3]), int(attrs[4]),
+                                       int(attrs[0]))
+                    elif cls.__name__ == "Square":
+                        instance = cls(int(attrs[1]), int(attrs[2]),
+                                       int(attrs[3]), int(attrs[0]))
+                    instance_list.append(instance)
+        except FileNotFoundError:
+            pass  # File does not exist, return an empty list
+
+        return instance_list
