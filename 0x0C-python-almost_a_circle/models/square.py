@@ -24,10 +24,12 @@ class Square(Rectangle):
 
     def __str__(self):
         """Returns a string representation of the class"""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size)
+        return "[Square] ({}) {}/{} - {}".format(
+                self.id, self.x, self.y, self.size)
 
     def update(self, *args, **kwargs):
-        """Updates object attributes based on arguments or keyword arguments."""
+        """Updates object attributes based on
+        arguments or keyword arguments."""
         if args:
             attributes = ["id", "size", "x", "y"]
             for i, arg in enumerate(args):
@@ -41,8 +43,8 @@ class Square(Rectangle):
     def to_dictionary(self):
         """returns the dictionary representation of a Square"""
         return {
-                'id' : self.id,
-                'size' : self.size,
-                'x' : self.x,
-                'y' : self.y
+                'id': self.id,
+                'size': self.size,
+                'x': self.x,
+                'y': self.y
                 }
