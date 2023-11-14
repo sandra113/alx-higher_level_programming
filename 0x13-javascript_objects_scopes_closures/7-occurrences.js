@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-exports.nbOccurrences = function (list, searchElement) {
+exports.nbOccurences = function (list, searchElement) {
   const count = list.reduce((accumulator, currentElement) => {
     if (currentElement === searchElement) {
       return accumulator + 1;
