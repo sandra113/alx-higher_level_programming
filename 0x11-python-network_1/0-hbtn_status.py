@@ -5,12 +5,13 @@ url = "https://alx-intranet.hbtn.io/status"
 
 try:
     with urllib.request.urlopen(url) as response:
-        body = response.read().decode('utf-8')
+        body_byte = response.read()
+        body_utf = body_byte.decode('utf-8')
 
         print("Body response:")
-        print("\t- type: {}".format(type(body)))
-        print("\t- content: {}".format(body))
-        print("\t- utf8 content: {}".format(body))
+        print("\t- type: {}".format(type(body_byte)))
+        print("\t- content: {}".format(body_byte))
+        print("\t- utf8 content: {}".format(body_utf))
 
 except urllib.error.URLError as e:
     print("Error accessing the URL:", e)
