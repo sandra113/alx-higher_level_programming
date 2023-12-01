@@ -10,6 +10,7 @@ try:
         print("Body response:")
         print("\t- type: {}".format(type(body)))
         print("\t- content: {}".format(body))
+        print("\t- utf8 content: {}".format(body))
 
 except urllib.error.URLError as e:
     print("Error accessing the URL:", e)
