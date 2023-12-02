@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""this module fetches from url using the urllib package"""
 import urllib.request
 import sys
 
