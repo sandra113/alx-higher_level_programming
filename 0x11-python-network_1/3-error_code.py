@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""this module sends a request to the URL and displays the body of the response (decoded in utf-8)."""
 
 import urllib.request
 import urllib.error
